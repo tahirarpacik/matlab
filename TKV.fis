@@ -1,0 +1,241 @@
+[System]
+Name='myFile'
+Type='mamdani'
+Version=2.0
+NumInputs=17
+NumOutputs=7
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='sum'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='F1_Mevcut_Temel_Kotu'
+Range=[0 1]
+NumMFs=3
+MF1='ampatmanlı':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='50cm_den_küçük':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='düz':'trimf',[0.585526315789474 1.00219298245614 1.41885964912281]
+
+[Input2]
+Name='F2_Yapı_Ağırlık_Merkezinin_Rijitlik_Merkezine_Olan_Uzaklığı'
+Range=[0 1]
+NumMFs=4
+MF1='çok_fazla':'trimf',[-0.3333 0 0.3333]
+MF2='normal':'trimf',[0 0.3333 0.6667]
+MF3='az':'trimf',[0.3333 0.6667 1]
+MF4='çok_az':'trimf',[0.6667 1 1.333]
+
+[Input3]
+Name='F3_Bina_Yatay/Dikey_Uzunluk_Oranı'
+Range=[0 1]
+NumMFs=4
+MF1='çok_fazla':'trimf',[-0.33110701754386 0.00219298245614036 0.33549298245614]
+MF2='normal':'trimf',[0 0.3333 0.6667]
+MF3='az':'trimf',[0.3333 0.6667 1]
+MF4='çok_az':'trimf',[0.6667 1 1.333]
+
+[Input4]
+Name='F4_Birim_Alana_Gelen_Ağırlık'
+Range=[0 1]
+NumMFs=4
+MF1='çok_ağır':'trimf',[-0.3333 0 0.3333]
+MF2='ağır':'trimf',[0 0.3333 0.6667]
+MF3='normal':'trimf',[0.3333 0.6667 1]
+MF4='hafif':'trimf',[0.6667 1 1.333]
+
+[Input5]
+Name='F5_Yapı_Geometrisi'
+Range=[0 1]
+NumMFs=2
+MF1='asimetrik':'trimf',[-0.00822 0.138 0.588267543859649]
+MF2='simetrik':'trimf',[0.315 0.941337719298246 1.42]
+
+[Input6]
+Name='S1_Geçirdiği_Restorasyon_Çalışmaları'
+Range=[0 1]
+NumMFs=4
+MF1='bakımsız':'trimf',[-0.3333 0 0.3333]
+MF2='az_bakımlı':'trimf',[0 0.3333 0.6667]
+MF3='bakımlı':'trimf',[0.3333 0.6667 1]
+MF4='çok_bakımlı':'trimf',[0.6667 1 1.333]
+
+[Input7]
+Name='S2_TKVnin_Yaşı'
+Range=[0 1]
+NumMFs=4
+MF1='çok':'trimf',[-0.3333 0 0.3333]
+MF2='orta':'trimf',[0 0.3333 0.6667]
+MF3='normal':'trimf',[0.3333 0.6667 1]
+MF4='az':'trimf',[0.6667 1 1.333]
+
+[Input8]
+Name='S3_Strüktür_Cinsi'
+Range=[0 1]
+NumMFs=4
+MF1='yığma_kagir':'trimf',[-0.3333 0 0.3333]
+MF2='yarım_kagir':'trimf',[0 0.3333 0.6667]
+MF3='ahşap':'trimf',[0.3333 0.6667 1]
+MF4='betonarme':'trimf',[0.6667 1 1.333]
+
+[Input9]
+Name='S4_Korunma_Durumu'
+Range=[0 1]
+NumMFs=4
+MF1='çok_yüksek':'trimf',[-0.3333 0 0.3333]
+MF2='yüksek':'trimf',[0 0.3333 0.6667]
+MF3='orta':'trimf',[0.3333 0.6667 1]
+MF4='düşük':'trimf',[0.6667 1 1.333]
+
+[Input10]
+Name='S5_Yapı_Periyodu_ve_Yeni_Zemin_Periyodu_Farkı'
+Range=[0 1]
+NumMFs=4
+MF1='aynı':'trimf',[-0.3333 0 0.3333]
+MF2='çok_yakın':'trimf',[0 0.3333 0.6667]
+MF3='yakın':'trimf',[0.3333 0.6667 1]
+MF4='uzak':'trimf',[0.6667 1 1.333]
+
+[Input11]
+Name='S6_Mevcut_Zemin_Taşıma_Gücü'
+Range=[0 1]
+NumMFs=3
+MF1='zayıf':'trimf',[-0.5 0 0.5]
+MF2='orta':'trimf',[0 0.5 1]
+MF3='sağlam':'trimf',[0.5 1 1.5]
+
+[Input12]
+Name='S7_Çatlaklarda_İzin_Verilen_Hareket_Sınırı'
+Range=[0 1]
+NumMFs=4
+MF1='çok_az':'trimf',[-0.3333 0 0.3333]
+MF2='az':'trimf',[0 0.3333 0.6667]
+MF3='fazla':'trimf',[0.3333 0.6667 1]
+MF4='çok_fazla':'trimf',[0.6667 1 1.333]
+
+[Input13]
+Name='C1_Yol_Eğimi'
+Range=[0 1]
+NumMFs=3
+MF1='yüksek':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='orta':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='az':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Input14]
+Name='C2_Yol_Genişliği'
+Range=[0 1]
+NumMFs=3
+MF1='az':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='orta':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='çok':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Input15]
+Name='C3_Taşıma_Mesafesi'
+Range=[0 1]
+NumMFs=3
+MF1='uzak':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='orta':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='kısa':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Input16]
+Name='C4_Yoldaki_Engeller'
+Range=[0 1]
+NumMFs=3
+MF1='Taşınmaz_Engeller':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='Taşınabilir_Engeller':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='Engel_Yok':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Input17]
+Name='C5_Tekerlekli_Sistemlerle_Taşımada_Dönme_Açısı'
+Range=[0 1]
+NumMFs=3
+MF1='çok':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='orta':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='az':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Output1]
+Name='T1_Burulma_Sehim_Çatlak_Eğim_İvme_Ölçer'
+Range=[0 1]
+NumMFs=3
+MF1='yok':'gbellmf',[0.25 2.5 0]
+MF2='mekanik':'gbellmf',[0.25 2.5 0.5]
+MF3='anlık_veri_iletimi':'gbellmf',[0.25 2.5 1.00216684723727]
+
+[Output2]
+Name='T2_Deneme_Taşıması'
+Range=[0 1]
+NumMFs=2
+MF1='yok':'trapmf',[-0.9 -0.1 0.5 0.5]
+MF2='var':'trapmf',[0.5 0.5 1.1 1.9]
+
+[Output3]
+Name='T3_Taşıma_Aracı_Özellikleri'
+Range=[0 1]
+NumMFs=3
+MF1='Vinç':'gbellmf',[0.25 17.2346679090309 0]
+MF2='Treyler':'gbellmf',[0.162022751895991 23 0.389]
+MF3='SPMT':'gbellmf',[0.478 24.9 0.991332611050921]
+
+[Output4]
+Name='O1_Kesim_İşlemi'
+Range=[0 1]
+NumMFs=3
+MF1='manuel':'gaussmf',[0.201978477966652 0]
+MF2='yarı_manuel':'gaussmf',[0.198 0.49783315276273]
+MF3='tam_otomatik':'gaussmf',[0.235182083428833 0.908]
+
+[Output5]
+Name='O2_Kaldırma_Yöntemi'
+Range=[0 1]
+NumMFs=3
+MF1='geleneksel':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='yarı_dinamik':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='ful_dinamik':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Output6]
+Name='O3_Uygulanan_Destek_Kiriş_Sistemi_ve_Kazıklar'
+Range=[0 1]
+NumMFs=3
+MF1='çelik_kiriş':'gauss2mf',[0.17 -0.05 0.111595349374954 0.119718309859155]
+MF2='çelik_ve_betonarme_konsol':'gauss2mf',[0.128 0.401 0.153561306931934 0.569339111592633]
+MF3='Çaprazlı_betonarme_grid_sistem':'gauss2mf',[0.0977966184063168 0.865113759479957 0.17 1.05]
+
+[Output7]
+Name='O4_Sismik_İzolatör'
+Range=[0 1]
+NumMFs=4
+MF1='Yok':'trapmf',[-0.3 -0.0333 0.194474539544962 0.3]
+MF2='Düşük_Sönümlü_İzolatör':'trapmf',[0.0333 0.237 0.397074756229686 0.633]
+MF3='Yüksek_Sönümlü_İzolatör_(FPS)':'trapmf',[0.367 0.552 0.749187432286024 0.967]
+MF4='Kurşun_Çekirdekli_İzolatör_(LRB)':'trapmf',[0.7 0.890032502708559 1.03 1.3]
+
+[Rules]
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1, 3 2 3 3 3 3 4 (1) : 1
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2, 2 2 2 2 2 2 3 (1) : 1
+3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3, 1 1 1 1 1 1 2 (1) : 1
+3 4 4 4 2 4 4 4 4 4 3 4 3 3 3 3 3, 1 1 1 1 1 1 1 (1) : 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1, 3 2 3 3 3 3 4 (1) : 2
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2, 2 2 2 2 2 2 3 (1) : 2
+3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3, 1 1 1 1 1 1 2 (1) : 2
+3 4 4 4 2 4 4 4 4 4 3 4 3 3 3 3 3, 1 1 1 1 1 1 1 (1) : 2
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0, 0 0 0 0 0 0 4 (1) : 1
+0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0, 0 0 0 0 0 0 3 (1) : 1
+0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0, 0 0 0 0 0 0 2 (1) : 1
+0 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0, 0 0 0 0 0 0 1 (1) : 1
+0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0, 3 0 3 0 0 0 0 (1) : 1
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0, 0 0 0 0 0 3 0 (1) : 1
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0, 3 2 0 0 0 0 0 (1) : 1
+0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0, 2 2 0 0 0 0 0 (1) : 1
+0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0, 0 2 3 0 3 0 3 (1) : 1
+0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0, 3 2 3 0 3 3 0 (1) : 1
+0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0, 0 0 0 0 0 2 0 (1) : 1
+3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0, 0 0 0 2 0 3 0 (1) : 1
+2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0, 0 0 0 3 0 3 0 (1) : 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0, 0 0 0 3 3 2 0 (1) : 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0, 0 0 0 0 3 0 0 (1) : 1
+0 0 0 1 -2 0 0 0 0 0 0 0 0 0 0 0 0, 0 0 0 0 -1 0 0 (1) : 1
+0 0 0 2 -2 0 0 0 0 0 0 0 0 0 0 0 0, 0 0 0 0 -1 0 0 (1) : 1
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 -1 0, 0 0 0 0 0 3 0 (1) : 1
+0 0 0 0 0 0 0 1 0 0 0 0 -1 0 0 0 0, -3 0 3 0 0 0 0 (1) : 1
